@@ -19,9 +19,16 @@ int main(){
         list1.push_back(line);
     }
 
-    for(auto i : list1){
-        cout << line << endl;
-    }
+    string search = "CORINTHIANS";
 
-    
+    for(auto i : list1){
+        string temp = i;
+        temp = temp.substr(0, i.length() -1);
+        // Comparação de duas strings
+        if(i.compare(search) == 0){
+            cout << "Text found on position" << i << endl;
+        }else{
+            cout << "Text not found" << endl;
+        }
+    }
 }
